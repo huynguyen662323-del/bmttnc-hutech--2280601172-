@@ -1,0 +1,19 @@
+# Nhập số giờ làm mỗi tuần
+so_gio_lam = float(input("Nhập số giờ làm mỗi tuần: "))
+
+# Nhập mức thù lao trên mỗi giờ làm tiêu chuẩn
+luong_gio = float(input("Nhập thù lao trên mỗi giờ làm tiêu chuẩn: "))
+
+# Số giờ làm chuẩn mỗi tuần
+gio_tieu_chuan = 44
+
+# Số giờ làm vượt chuẩn (nếu âm thì lấy 0)
+gio_vuot_chuan = max(0, so_gio_lam - gio_tieu_chuan)
+
+# Tính tổng thu nhập:
+#  - giờ chuẩn: gio_tieu_chuan * luong_gio
+#  - giờ vượt:  gio_vuot_chuan * luong_gio * 1.5
+thuc_linh = gio_tieu_chuan * luong_gio + gio_vuot_chuan * luong_gio * 1.5
+
+# In kết quả
+print(f"Số tiền thực lĩnh của nhân viên: {thuc_linh}")
